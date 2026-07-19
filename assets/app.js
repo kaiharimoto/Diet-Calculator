@@ -246,7 +246,7 @@
       ['Protein', plan.macros.protein_g + ' g (~' + plan.plate.proteinServings + ' palm-size servings)'],
       ['Collagen / glycine', s.glycine_g + ' g — broth, connective cuts or ' + s.collagenPeptides_g + ' g peptides'],
       ['Omega-3 (EPA+DHA)', s.omega3_g + ' g — fatty fish ' + plan.plate.fattyFishPerWeek + '×/week'],
-      ['Vitamin C', s.vitC_mg + ' mg — berries, citrus, red pepper'],
+      ['Vitamin C', s.vitC],
       ['Vitamin A', s.vitaminA],
       ['Zinc + copper', s.zinc_mg + ' mg zinc · ' + s.copper_mg + ' mg copper (kept in balance)'],
       ['Sugar cap', 'under ' + s.sugarCap_g + ' g · honey ' + s.honeyCap],
@@ -275,7 +275,7 @@
       { t: 'Hit protein target', s: p ? p.macros.protein_g + ' g today' : 'your daily grams' },
       { t: 'Eat a collagen source', s: 'broth, gelatin, peptides or a skin-on cut' },
       { t: 'Omega-3 serving', s: 'fatty fish, roe or a fish-oil source' },
-      { t: 'A vitamin-C food', s: 'berries, citrus or red pepper' },
+      { t: 'A little vitamin C', s: 'fresh/raw animal food, low-fructose fruit or bell pepper' },
       { t: 'Stay under the sugar budget', s: p ? '~' + p.striveFor.sugarCap_g + ' g fruit + honey' : 'keep free sugar modest' },
       { t: 'Cook gentle — no char', s: 'steam, poach, braise or slow-cook' },
       { t: 'Hydrate', s: p ? p.striveFor.water_L + ' L water' : '2–3 L water' }

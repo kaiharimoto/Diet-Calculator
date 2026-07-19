@@ -225,7 +225,7 @@
       striveFor: {
         glycine_g: 10,
         collagenPeptides_g: '2.5-10',
-        vitC_mg: '250-500',
+        vitC: 'modest — low-carb lowers the need; fresh/raw animal foods plus a little low-fructose fruit or bell pepper cover it',
         zinc_mg: zincMg,
         copper_mg: '0.9-2',
         omega3_g: '1-2',
@@ -273,7 +273,6 @@
       { name: 'Total fruit + honey sugar', freq: 'stay under your cap', why: 'Keep free-sugar-equivalent modest so you stay in a low-glycation, fat-losing state.' },
       { name: 'Charred / high-heat meats', freq: 'occasional', why: 'Grilling, broiling, frying and browned crispy surfaces are the highest dietary AGE sources. Enjoy occasionally, not by default.' },
       { name: 'Aged cheese & butter', freq: 'moderate', why: 'Nutritious but among the more AGE-dense dairy — keep portions moderate.' },
-      { name: 'Cruciferous & high-oxalate greens', freq: 'go easy', why: 'Kale, spinach, chard, broccoli, raw brassicas — goitrogens and oxalates can bind minerals and blunt absorption of the very nutrients you eat for your skin. Lean on low-fructose fruit and bell peppers for vitamin C instead; if you do eat greens, cook them well and keep portions small.' },
       { name: 'Alcohol', freq: 'minimal', why: 'Dehydrating, pro-inflammatory and it impairs the sleep your skin repairs during.' }
     ],
     avoid: [
@@ -282,7 +281,8 @@
       { name: 'Ultra-processed packaged foods', why: 'Deliver seed oils, refined sugar/fructose and preformed AGEs all at once.' },
       { name: 'HFCS, sodas & candy', why: 'Concentrated fructose is the most glycation-prone sugar and drives AGE cross-linking of collagen and elastin.' },
       { name: 'High-PUFA nuts in bulk', why: 'Walnuts (and to a lesser degree almonds, peanuts, peanut oil) carry significant omega-6. Small amounts are fine; bulk snacking is not.' },
-      { name: 'Margarine & hydrogenated spreads', why: 'Oxidized, trans-fat-adjacent PUFA products.' }
+      { name: 'Margarine & hydrogenated spreads', why: 'Oxidized, trans-fat-adjacent PUFA products.' },
+      { name: 'Antinutrient-heavy vegetables', why: 'Cruciferous (kale, broccoli, brassicas) and high-oxalate greens (spinach, chard, parsley) — goitrogens and oxalates bind minerals and can blunt absorption of the very nutrients you eat for your skin. Get the little vitamin C you need from low-fructose fruit, bell peppers or fresh animal foods instead.' }
     ]
   };
 

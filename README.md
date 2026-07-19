@@ -24,7 +24,7 @@ Built to install on an **iPhone** straight from Safari — full-screen, offline,
 
 **Animal-based · low-PUFA · low-AGE · anti-inflammatory** — three levers:
 
-- **Build the raw materials.** Collagen and elastin need glycine, proline, vitamin C, retinol, zinc and copper — from meat, fatty fish, eggs, liver, shellfish and bone broth. High protein also protects lean mass in a deficit.
+- **Build the raw materials.** Collagen and elastin need glycine, proline, retinol, zinc and copper — from meat, fatty fish, eggs, liver, shellfish and bone broth — plus modest vitamin C from fresh animal foods and a little low-fructose fruit (low-carb eating lowers the requirement, so we don't lean on antinutrient-heavy greens). High protein also protects lean mass in a deficit.
 - **Stop what ages skin.** Cut the two dermis-degraders: **AGEs** (from excess sugar — especially fructose — and charred, high-heat cooking) and **PUFA seed oils** (which oxidize into inflammatory aldehydes). Cook gentle and moist.
 - **Lose fat gently.** A modest deficit with high protein sheds fat while sparing the collagen a crash diet burns through.
 
@@ -32,7 +32,7 @@ Built to install on an **iPhone** straight from Safari — full-screen, offline,
 
 | Eat | Limit | Avoid |
 |-----|-------|-------|
-| Fatty fish, ruminant meat, liver, bone broth & connective cuts, eggs, shellfish, dairy, collagen peptides, low-fructose fruit, bell peppers | Honey (1–2 tsp), high-sugar/dried fruit, total sugar load, charred meats, aged cheese & butter, cruciferous & high-oxalate greens, alcohol | Seed & vegetable oils, deep-fried/fast food, ultra-processed foods, HFCS/soda/candy, high-PUFA nuts in bulk, margarine |
+| Fatty fish, ruminant meat, liver, bone broth & connective cuts, eggs, shellfish, dairy, collagen peptides, low-fructose fruit, bell peppers | Honey (1–2 tsp), high-sugar/dried fruit, total sugar load, charred meats, aged cheese & butter, alcohol | Seed & vegetable oils, deep-fried/fast food, ultra-processed foods, HFCS/soda/candy, high-PUFA nuts in bulk, margarine, antinutrient-heavy vegetables (cruciferous & high-oxalate greens) |
 
 ---
 
