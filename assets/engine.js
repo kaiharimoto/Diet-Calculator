@@ -263,8 +263,8 @@
       { name: 'Shellfish & oysters', freq: '1-2x/week', why: 'Exceptional zinc and copper (cofactors for collagen/elastin cross-linking) plus selenium and DHA.' },
       { name: 'Fresh & fermented dairy', freq: 'as tolerated', why: 'Kefir, yogurt, cheese, whole milk — protein, calcium, retinol and probiotics. Whole-fat, low added sugar.' },
       { name: 'Collagen peptides / gelatin', freq: '2.5-10 g/day', why: 'RCTs show improved skin hydration, elasticity and fewer wrinkles — a reliable low-AGE way to hit glycine/proline.' },
-      { name: 'Low-fructose whole fruit', freq: 'in season', why: 'Berries, kiwi, citrus, melon — vitamin C for collagen synthesis plus polyphenol antioxidants, with the least sugar per gram.' },
-      { name: 'Vitamin-C vegetables', freq: 'daily', why: 'Bell peppers, kale, broccoli, parsley — collagen-cofactor vitamin C with minimal sugar (one red pepper ~190 mg).' },
+      { name: 'Low-fructose whole fruit', freq: 'in season', why: 'Berries, kiwi, citrus, melon — the main vitamin C for collagen synthesis plus polyphenol antioxidants, with the least sugar per gram and no antinutrient load.' },
+      { name: 'Bell peppers', freq: 'optional', why: 'A low-antinutrient produce option (botanically a fruit) packing vitamin C — one red pepper ~190 mg — without the oxalates or goitrogens of leafy greens.' },
       { name: 'Fish roe', freq: 'optional', why: 'DHA plus fat-soluble vitamins A and D.' }
     ],
     limit: [
@@ -273,6 +273,7 @@
       { name: 'Total fruit + honey sugar', freq: 'stay under your cap', why: 'Keep free-sugar-equivalent modest so you stay in a low-glycation, fat-losing state.' },
       { name: 'Charred / high-heat meats', freq: 'occasional', why: 'Grilling, broiling, frying and browned crispy surfaces are the highest dietary AGE sources. Enjoy occasionally, not by default.' },
       { name: 'Aged cheese & butter', freq: 'moderate', why: 'Nutritious but among the more AGE-dense dairy — keep portions moderate.' },
+      { name: 'Cruciferous & high-oxalate greens', freq: 'go easy', why: 'Kale, spinach, chard, broccoli, raw brassicas — goitrogens and oxalates can bind minerals and blunt absorption of the very nutrients you eat for your skin. Lean on low-fructose fruit and bell peppers for vitamin C instead; if you do eat greens, cook them well and keep portions small.' },
       { name: 'Alcohol', freq: 'minimal', why: 'Dehydrating, pro-inflammatory and it impairs the sleep your skin repairs during.' }
     ],
     avoid: [

@@ -32,7 +32,7 @@ Built to install on an **iPhone** straight from Safari — full-screen, offline,
 
 | Eat | Limit | Avoid |
 |-----|-------|-------|
-| Fatty fish, ruminant meat, liver, bone broth & connective cuts, eggs, shellfish, dairy, collagen peptides, low-fructose fruit, vitamin-C veg | Honey (1–2 tsp), high-sugar/dried fruit, total sugar load, charred meats, aged cheese & butter, alcohol | Seed & vegetable oils, deep-fried/fast food, ultra-processed foods, HFCS/soda/candy, high-PUFA nuts in bulk, margarine |
+| Fatty fish, ruminant meat, liver, bone broth & connective cuts, eggs, shellfish, dairy, collagen peptides, low-fructose fruit, bell peppers | Honey (1–2 tsp), high-sugar/dried fruit, total sugar load, charred meats, aged cheese & butter, cruciferous & high-oxalate greens, alcohol | Seed & vegetable oils, deep-fried/fast food, ultra-processed foods, HFCS/soda/candy, high-PUFA nuts in bulk, margarine |
 
 ---
 
