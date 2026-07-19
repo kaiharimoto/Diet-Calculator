@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Lumière — Skin Diet</title>
+  <meta name="description" content="A personalized animal-based, low-PUFA, low-AGE diet plan for clear skin, restored elasticity and gentle fat loss." />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#FBF6F1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1A1512" media="(prefers-color-scheme: dark)" />
+
+  <!-- iOS standalone -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Lumière" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- Splash -->
+  <div id="splash">
+    <div class="orb"></div>
+    <div class="word">Lumière</div>
+  </div>
+
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <main id="app">
+
+    <!-- ===================== PROFILE ===================== -->
+    <section class="screen" id="screen-profile" data-screen="profile">
+      <div class="screen-head">
+        <p class="eyebrow">Let's calibrate</p>
+        <h1>Your profile</h1>
+        <p class="sub">Enter your details and we'll shape a plan around you.</p>
+      </div>
+
+      <div id="install-coach" class="card coach hidden" style="position:relative">
+        <button class="close" id="coach-close" aria-label="Dismiss">×</button>
+        <p class="eyebrow">Install on your iPhone</p>
+        <p style="margin:0;font-size:0.9rem">Add Lumière to your Home Screen so it opens like a real app — full-screen and offline.</p>
+        <ol>
+          <li>Tap the <strong>Share</strong> icon in Safari</li>
+          <li>Choose <strong>Add to Home Screen</strong></li>
+          <li>Tap <strong>Add</strong></li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div class="field">
+          <label class="lbl" for="name">Name <span class="muted">(optional)</span></label>
+          <input type="text" id="name" placeholder="Your name" autocomplete="given-name" />
+        </div>
+
+        <div class="field">
+          <label class="lbl">Biological sex <span class="muted">— used for the BMR formula</span></label>
+          <div class="segmented" data-seg="sex">
+            <button type="button" data-val="female" aria-pressed="true">Female</button>
+            <button type="button" data-val="male" aria-pressed="false">Male</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="lbl" for="age">Age</label>
+            <input type="number" id="age" inputmode="numeric" min="18" max="100" placeholder="30" />
+          </div>
+          <div class="field">
+            <label class="lbl">Units</label>
+            <div class="unit-toggle" data-seg="units" style="height:48px">
+              <button type="button" data-val="imperial" aria-pressed="true">US</button>
+              <button type="button" data-val="metric" aria-pressed="false">Metric</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="lbl">Height</label>
+          <div class="dual" data-unit-group="height">
+            <div class="imperial-only dual" style="flex:1">
+              <input type="number" id="heightFt" inputmode="numeric" min="4" max="8" placeholder="ft" />
+              <input type="number" id="heightIn" inputmode="numeric" min="0" max="11" placeholder="in" />
+            </div>
+            <input type="number" id="height_cm" class="metric-only" inputmode="decimal" min="120" max="250" placeholder="cm" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label class="lbl">Current weight</label>
+            <div class="dual" data-unit-group="weight">
+              <input type="number" id="weight_lb" class="imperial-only" inputmode="decimal" placeholder="lb" />
+              <input type="number" id="weight_kg" class="metric-only" inputmode="decimal" placeholder="kg" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="lbl">Goal weight <span class="muted">(opt.)</span></label>
+            <div class="dual" data-unit-group="target">
+              <input type="number" id="targetWeight_lb" class="imperial-only" inputmode="decimal" placeholder="lb" />
+              <input type="number" id="targetWeight_kg" class="metric-only" inputmode="decimal" placeholder="kg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="lbl">Activity level</label>
+          <div class="slider-wrap">
+            <input type="range" id="activity" min="0" max="4" step="1" value="1" />
+            <div class="slider-value" id="activity-value">Lightly active</div>
+            <div class="slider-labels"><span>Low</span><span>High</span></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="lbl">Primary goal</label>
+          <div class="segmented" data-seg="goal">
+            <button type="button" data-val="fatLoss" aria-pressed="true">Fat loss</button>
+            <button type="button" data-val="recomposition" aria-pressed="false">Recomp</button>
+            <button type="button" data-val="maintenance" aria-pressed="false">Maintain</button>
+          </div>
+        </div>
+
+        <div class="field" id="deficit-field">
+          <label class="lbl">Pace <span class="muted">— how fast to lose</span></label>
+          <div class="segmented" data-seg="deficitAggressiveness">
+            <button type="button" data-val="modest" aria-pressed="true">Gentle</button>
+            <button type="button" data-val="moderate" aria-pressed="false">Moderate</button>
+            <button type="button" data-val="aggressive" aria-pressed="false">Faster</button>
+          </div>
+          <p class="hint">Slower loss protects collagen and skin elasticity.</p>
+        </div>
+
+        <details class="advanced">
+          <summary>Advanced &amp; safety (optional)</summary>
+          <div class="field mt16">
+            <label class="lbl" for="bodyFatPct">Body fat % <span class="muted">— sharpens the estimate</span></label>
+            <input type="number" id="bodyFatPct" inputmode="decimal" min="10" max="60" placeholder="e.g. 26" />
+          </div>
+          <div class="field">
+            <label class="lbl">Life stage</label>
+            <div class="chips" data-chips="contextFlags">
+              <button type="button" class="chip" data-val="pregnant" aria-pressed="false">Pregnant</button>
+              <button type="button" class="chip" data-val="breastfeeding" aria-pressed="false">Breastfeeding</button>
+            </div>
+            <p class="hint">If selected, no calorie deficit is applied (a maintenance plan).</p>
+          </div>
+          <div class="field">
+            <label class="lbl">Health notes</label>
+            <div class="chips" data-chips="healthFlags">
+              <button type="button" class="chip" data-val="diabetes" aria-pressed="false">Diabetes</button>
+              <button type="button" class="chip" data-val="kidneyDisease" aria-pressed="false">Kidney</button>
+              <button type="button" class="chip" data-val="onMedication" aria-pressed="false">On meds</button>
+              <button type="button" class="chip" data-val="eatingDisorderHistory" aria-pressed="false">ED history</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <button class="btn press" id="calc-btn">See my plan ✨</button>
+      <p class="hint center mt8" id="form-error" style="color:var(--clay)"></p>
+    </section>
+
+    <!-- ===================== DASHBOARD ===================== -->
+    <section class="screen" id="screen-dashboard" data-screen="dashboard">
+      <div class="screen-head">
+        <p class="eyebrow" id="greeting">Your plan</p>
+        <h1 id="dash-title">Your plan</h1>
+      </div>
+
+      <div id="dash-empty" class="card center">
+        <p class="muted" style="margin:8px 0 16px">Fill in your profile to see your personalized targets.</p>
+        <button class="btn press" data-goto="profile">Go to profile</button>
+      </div>
+
+      <div id="dash-content" class="hidden">
+        <div class="card hero-cal">
+          <p class="eyebrow">Daily target</p>
+          <div class="ring-wrap">
+            <svg viewBox="0 0 120 120" width="190" height="190">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="9" />
+              <circle id="cal-ring" cx="60" cy="60" r="52" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="326.7" stroke-dashoffset="0" />
+            </svg>
+            <div class="big"><span class="num" id="cal-num">0</span><span class="unit">calories / day</span></div>
+          </div>
+          <p class="subline" id="cal-sub"></p>
+        </div>
+
+        <div class="macro-grid" id="macro-grid"></div>
+
+        <div class="card">
+          <p class="eyebrow">Skin-safe sugar budget</p>
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font-family:var(--serif);font-size:1.4rem" id="sugar-num">0 g</span>
+            <span class="pill honey">fruit + honey / day</span>
+          </div>
+          <div class="meter"><span id="sugar-meter" style="width:60%"></span></div>
+          <p class="mwhy muted" style="font-size:0.8rem;margin:2px 0 0">Keep free sugar modest so it can't glycate collagen. Honey: 1–2 tsp, always with protein or fat — fructose glycates ~10× faster than glucose.</p>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">The numbers behind it</p>
+          <div class="stat-line"><span class="k">BMR <span id="bmr-model" class="muted"></span></span><span class="v"><span id="bmr-v">0</span> kcal</span></div>
+          <div class="stat-line"><span class="k">Maintenance (TDEE)</span><span class="v"><span id="tdee-v">0</span> kcal</span></div>
+          <div class="stat-line"><span class="k">Daily deficit</span><span class="v" id="deficit-v">0 kcal</span></div>
+          <div class="stat-line"><span class="k">Est. weekly fat loss</span><span class="v" id="loss-v">0</span></div>
+          <div class="stat-line"><span class="k">Protein target</span><span class="v" id="ppk-v"></span></div>
+          <div class="stat-line"><span class="k">Hydration</span><span class="v"><span id="water-v">0</span> L</span></div>
+          <div class="stat-line"><span class="k">Omega-6 : Omega-3 goal</span><span class="v">1:1 – 4:1</span></div>
+        </div>
+
+        <div id="notes-wrap"></div>
+
+        <div class="card cook-card">
+          <p class="eyebrow">Cooking method</p>
+          <p style="margin:0;font-size:0.88rem" id="cooking-text"></p>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn secondary press" data-goto="profile">Adjust</button>
+          <button class="btn press" data-goto="framework">The food plan →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FRAMEWORK ===================== -->
+    <section class="screen" id="screen-framework" data-screen="framework">
+      <div class="screen-head">
+        <p class="eyebrow">The framework</p>
+        <h1>Eat · Limit · Avoid</h1>
+        <p class="sub">Animal-based, low in PUFAs and AGEs — built to clear skin, restore texture and lose fat.</p>
+      </div>
+
+      <div class="cat-tabs" data-seg="cat">
+        <button type="button" data-cat="eat" data-val="eat" aria-pressed="true">Eat</button>
+        <button type="button" data-cat="limit" data-val="limit" aria-pressed="false">Limit</button>
+        <button type="button" data-cat="avoid" data-val="avoid" aria-pressed="false">Avoid</button>
+      </div>
+
+      <div class="card" id="framework-list"></div>
+
+      <div class="card">
+        <p class="eyebrow">Strive for daily</p>
+        <div id="strive-list"></div>
+      </div>
+    </section>
+
+    <!-- ===================== TODAY ===================== -->
+    <section class="screen" id="screen-today" data-screen="today">
+      <div class="screen-head">
+        <p class="eyebrow" id="today-date">Today</p>
+        <h1>Daily rituals</h1>
+      </div>
+
+      <div class="card">
+        <div class="today-ring">
+          <div class="macro-ring" style="width:70px;height:70px">
+            <svg viewBox="0 0 120 120" width="70" height="70">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="var(--hairline)" stroke-width="12" />
+              <circle id="today-ring-fill" cx="60" cy="60" r="52" fill="none" stroke="var(--sage)" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="326.7" stroke-dashoffset="326.7" />
+            </svg>
+            <div class="g"><span class="n" id="today-pct" style="font-size:1rem">0%</span></div>
+          </div>
+          <div class="info">
+            <h2 id="today-count">0 of 0</h2>
+            <p>rituals complete today</p>
+          </div>
+        </div>
+        <div class="streak mt16" id="streak"></div>
+        <p class="hint center mt8">Consistency over perfection — your last 7 days.</p>
+      </div>
+
+      <div id="today-list"></div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="screen" id="screen-about" data-screen="about">
+      <div class="screen-head">
+        <p class="eyebrow">The philosophy</p>
+        <h1>Why this works</h1>
+      </div>
+
+      <div class="card philo">
+        <p><strong>Build the raw materials.</strong> Collagen and elastin are made from glycine, proline, vitamin C, retinol, zinc and copper — all abundant in an animal-based plate of meat, fish, eggs, liver, shellfish and bone broth. High protein also protects lean mass while you lose fat.</p>
+        <p><strong>Stop the two things that age skin.</strong> Advanced glycation end-products (AGEs) stiffen collagen — driven by excess sugar (especially fructose) and by charred, high-heat cooking. Seed-oil PUFAs oxidize into inflammatory aldehydes. Cut both, and cook gentle and moist.</p>
+        <p><strong>Lose fat, gently.</strong> A modest 10–20% calorie deficit with high protein sheds fat while sparing the collagen and elasticity that crash diets burn through.</p>
+      </div>
+
+      <div class="card disclaimer">
+        <p class="eyebrow">Please read</p>
+        <p style="margin:0;font-size:0.86rem;line-height:1.6">This app is general wellness and educational information only — not medical, nutritional or diagnostic advice, and no substitute for a clinician or registered dietitian. Calorie and macro figures are estimates (±10%); track how you feel and adjust. If you have diabetes, kidney disease, take medication, are pregnant/breastfeeding, are under 18, or have a history of disordered eating, please consult a professional first. Individual lipid and health responses to a higher-saturated-fat pattern vary. Preformed vitamin A (liver) has an upper limit of ~3000 mcg RAE/day and should be avoided in high doses during pregnancy.</p>
+      </div>
+
+      <div class="card">
+        <p class="eyebrow">Settings</p>
+        <div class="setting-row">
+          <span>Appearance</span>
+          <div class="segmented" data-seg="theme" style="width:auto">
+            <button type="button" data-val="light" aria-pressed="false">Light</button>
+            <button type="button" data-val="dark" aria-pressed="false">Dark</button>
+            <button type="button" data-val="" aria-pressed="true">Auto</button>
+          </div>
+        </div>
+        <div class="setting-row">
+          <span>Reset my data</span>
+          <button class="btn ghost press" id="reset-btn" style="width:auto;padding:8px 16px">Reset</button>
+        </div>
+        <div class="setting-row">
+          <span class="muted" style="font-size:0.82rem">Lumière · v1.0 · works offline</span>
+        </div>
+      </div>
+
+      <div class="card" id="about-install">
+        <p class="eyebrow">Install to Home Screen</p>
+        <p style="margin:0;font-size:0.88rem">In Safari, tap <strong>Share</strong> → <strong>Add to Home Screen</strong> → <strong>Add</strong>. Lumière will open full-screen and work with no connection.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== TAB BAR ===================== -->
+  <nav class="tabbar" role="tablist">
+    <button role="tab" data-tab="profile" aria-selected="false">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+      Profile
+    </button>
+    <button role="tab" data-tab="dashboard" aria-selected="true">
+      <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 18 0"/><path d="M12 12l4-3"/></svg>
+      Plan
+    </button>
+    <button role="tab" data-tab="framework" aria-selected="false">
+      <svg viewBox="0 0 24 24"><path d="M6 3v18"/><path d="M6 8c4 0 4-4 8-4v9c-4 0-4 4-8 4"/></svg>
+      Food
+    </button>
+    <button role="tab" data-tab="today" aria-selected="false">
+      <svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>
+      Today
+    </button>
+    <button role="tab" data-tab="about" aria-selected="false">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.5" r="0.6" fill="currentColor"/></svg>
+      About
+    </button>
+  </nav>
+
+  <script src="assets/engine.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
